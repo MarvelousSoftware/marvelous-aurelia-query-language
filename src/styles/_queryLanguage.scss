@@ -1,0 +1,100 @@
+.m-query-language-editor {	
+	input { 
+		font-family: monospace, sans-serif;
+	}
+	
+	&.mql-active {
+    input {
+      border-bottom-left-radius: 0px;
+    }
+    button {
+      border-bottom-right-radius: 0px;
+    }
+	}
+	
+	&.mql-errors {
+		input {
+      border-bottom-left-radius: 0px;
+    }
+    button {
+      border-bottom-right-radius: 0px;
+    }
+		
+		.m-alert {
+			border: none;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+	}
+	
+	.mql-editor-text-wrapper {
+		display: table;
+		width: 100%;
+		
+		.mql-editor-text-input {
+			width: 100%;
+			display: table-cell;
+			
+			input {
+				border-right: none;
+			}
+		}
+		
+		.mql-editor-filter-button {
+			width: 1%;
+			display: table-cell;
+      vertical-align: top;
+      
+      button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+		}
+		
+		.mql-editor-text-input input {
+      height: 33px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+		}
+	}
+	
+	.mql-editor-completions-wrapper {
+		position: relative;
+		
+		.mql-editor-completions {		
+			position: absolute;
+			right: 0;
+			left: 0;
+			z-index: 1001;
+				
+			padding: 0;
+			margin: 0;
+				
+			border-left: 1px solid $list-border;
+			border-right: 1px solid $list-border;
+			border-bottom: 1px solid $list-border;
+			border-bottom-left-radius: $border-radius-base;
+			
+			box-shadow: $ql-completions-shadow;
+			
+			li {
+				list-style: none;
+				padding: 4px 8px;
+				
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			
+			.mql-completion {
+				background-color: $list-item-bg;
+				color: $list-item-color;
+			}
+			
+			.mql-completion-selected {
+				background-color: $list-item-selected-bg;
+				color: $list-item-selected-color;
+			}
+		}
+	}
+}

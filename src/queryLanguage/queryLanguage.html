@@ -1,0 +1,43 @@
+<template>
+	<div class="m-query-language-editor ${autoCompletionResult && autoCompletionResult.Completions.length !== 0 ? 'mql-active' : ''} ${errors.length ? 'mql-errors' : ''}">
+		
+		<div if.bind="options.inlineButton">
+			<div class="mql-editor-text-wrapper">
+				<div class="mql-editor-text-input">
+					<input placeholder="Write a query" class="m-form-control" type="text"/>
+				</div>
+				<div class="mql-editor-filter-button">
+					<button click.delegate="submit()" disabled.bind="_loading" class="m-btn m-btn-default">${options.inlineButtonText}</button>
+				</div>
+			</div>
+		</div>
+		<div if.bind="!options.inlineButton">
+			<input placeholder="Write a query" class="m-form-control" type="text"/>
+		</div>
+				
+		<div if.bind="autoCompletionResult.Completions.length" class="mql-editor-completions-wrapper">
+			<ul mouseenter.trigger="_preventFromFocusOut = true" 
+			mouseleave.trigger="_preventFromFocusOut = false" 
+			class="mql-editor-completions">
+				<li class="${$index === $parent.selectedCompletionIndex ? 'mql-completion-selected' : 'mql-completion'}" 
+				repeat.for="completion of autoCompletionResult.Completions"
+				mouseenter.trigger="$parent.select(completion)"
+				click.trigger="$parent.onCompletionClick($event)">
+					${completion.Text}
+				</li>
+			</ul>
+		</div>
+		
+		<div>
+			<div if.bind="errors.length === 1" class="m-alert m-alert-error" role="alert">
+				${errors[0]}
+			</div>
+			<div if.bind="errors.length > 1" class="m-alert m-alert-error" role="alert">
+				<ul>
+					<li repeat.for="error of errors">${error}</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</template>
