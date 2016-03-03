@@ -4,7 +4,7 @@
 		<div if.bind="options.inlineButton">
 			<div class="mql-editor-text-wrapper">
 				<div class="mql-editor-text-input">
-					<input placeholder="Write a query" class="m-form-control" type="text"/>
+					<input placeholder="Write a query" class="m-form-control" type="text" ref="_queryInputElement" value.bind="query"/>
 				</div>
 				<div class="mql-editor-filter-button">
 					<button click.delegate="submit()" disabled.bind="_loading" class="m-btn m-btn-default">${options.inlineButtonText}</button>
@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div if.bind="!options.inlineButton">
-			<input placeholder="Write a query" class="m-form-control" type="text"/>
+			<input placeholder="Write a query" class="m-form-control" type="text" ref="_queryInputElement" value.bind="query"/>
 		</div>
 				
 		<div if.bind="autoCompletionResult.Completions.length" class="mql-editor-completions-wrapper">
