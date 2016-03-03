@@ -32,15 +32,9 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'marvelou
                     this.errors = [];
                     this._subs = [];
                     this._preventFromFocusOut = false;
+                    this.query = '';
                 }
-                Object.defineProperty(QueryLanguage.prototype, "query", {
-                    get: function () { return this._queryInputElement.value; },
-                    set: function (value) { this._queryInputElement.value = value; },
-                    enumerable: true,
-                    configurable: true
-                });
                 QueryLanguage.prototype.attached = function () {
-                    this._queryInputElement = this._element.querySelector('input');
                     this.validateOptions();
                     this.createOptions();
                     this.registerInputHandlers();
