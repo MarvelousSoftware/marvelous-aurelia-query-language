@@ -1,12 +1,14 @@
 # Getting started
 The `marvelous-aurelia-query-language` is an open source domain specific language built on top of <code>.NET</code> platform. 
-It allows to filter data using custom syntax. The goal is to provide advanced users a way to quickly get needed data.
-It has built-in support for auto completions. Although the code editor is using aurelia framework the further version will 
-provide a separate, independent package.
+The goal is to provide advanced users a way to quickly get needed data. It has built-in support for auto completions. 
+
+Although the code editor is using aurelia framework the further version will provide a separate, independent package.
 
 Project documentation: [http://marvelous.software/docs.html#/query-language](http://marvelous.software/docs.html#/query-language)
 
-Please bear in mind that this library is still in the early beta and some features might be missing.
+.NET backend source code: https://github.com/MarvelousSoftware/MarvelousSoftwareDotNet
+
+NOTE: Please bear in mind that this library is still in the early beta and some features might be missing.
 
 ## Installation
 The `marvelous-aurelia-query-language` consists of 2 packages: client side and server side. First install client side library:
@@ -66,7 +68,7 @@ Currently only modern browsers are supported, but IE >= 9 support is on the TODO
 
 ## License
 GNU General Public License is the only option for now, but commercial license will be available in the future.
-It will not be free, but price will be really reasonable.
+It will not be free, but price will be affordable even for small projects.
 
 ## Dependencies
 * aurelia-dependency-injection
