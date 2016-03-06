@@ -7,7 +7,7 @@
   "main": "dist/common/queryLanguage.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/MarvelousSoftware/marvelous-aurelia-query-language"
   },
   "devDependencies": {
     "aurelia-tools": "^0.1.3",
