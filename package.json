@@ -4,7 +4,7 @@
   "author": "Damian Kaminski",
   "license": "GNU General Public License",
   "homepage": "http://marvelous.software/docs.html#/query-language",
-  "main": "dist/common/queryLanguage.js",
+  "main": "dist/common/query-language.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/MarvelousSoftware/marvelous-aurelia-query-language"
@@ -57,7 +57,7 @@
   },
   "jspm": {
     "registry": "github",
-    "main": "queryLanguage",
+    "main": "query-language",
     "format": "amd",
     "directories": {
       "lib": "dist/amd"
@@ -77,7 +77,7 @@
   },
   "marvelous": {
     "projects": {
-      "core": "../marvelous-aurelia-core/"
+      "marvelous-aurelia-core": "../marvelous-aurelia-core/"
     }
   }
 }

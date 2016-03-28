@@ -19,14 +19,13 @@ module.exports = {
     output: 'dist/'
   },
   deps: [
-    getDependencyInfo('core')
+    getDependencyInfo('marvelous-aurelia-core', 'core'),
   ]
 };
 var deps = module.exports.deps;
 deps.watch = deps.map(function (x) { return x.buildSyncFile; });
 
-function getDependencyInfo (name, packageName) {
-  packageName = 'marvelous-aurelia-' + (packageName || name);
+function getDependencyInfo (packageName, mainFile) {
   var packagesDirectory = jspmPackages + '/github/marveloussoftware/';
   
   var jspmPackageDefinition = pkg.jspm.dependencies[packageName];
@@ -39,19 +38,19 @@ function getDependencyInfo (name, packageName) {
   var fullPackageName = packageName + '@' + version;
   
   return {
-    name: name,
+    name: packageName,
     fullPackageName: fullPackageName,
-    main: 'github:marveloussoftware/' + fullPackageName + '/' + name,
+    main: 'github:marveloussoftware/' + fullPackageName + '/' + mainFile,
     packagesDirectory: packagesDirectory,
     copy: [
       {
-        src: pkg.marvelous.projects[name] + 'dev/system/**/*.*',
+        src: pkg.marvelous.projects[packageName] + 'dev/system/**/*.*',
         dest: packagesDirectory + fullPackageName
       },
       {
-        src: pkg.marvelous.projects[name] + 'dev/' + packageName + '.d.ts',
-        dest: 'typings/marvelous-software'
+        src: pkg.marvelous.projects[packageName] + 'dev/' + packageName + '.d.ts',
+        dest: packagesDirectory + fullPackageName
       }],
-    buildSyncFile: pkg.marvelous.projects[name] + 'dev/buildSyncFile.txt'
+    buildSyncFile: pkg.marvelous.projects[packageName] + 'dev/buildSyncFile.txt'
   }
 }
