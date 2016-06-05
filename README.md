@@ -67,8 +67,7 @@ Now you are ready to go.
 Currently only modern browsers are supported, but IE >= 9 support is on the TODO list.
 
 ## License
-GNU General Public License is the only option for now, but commercial license will be available in the future.
-It will not be free, but price will be affordable even for small projects.
+MIT
 
 ## Dependencies
 * aurelia-dependency-injection
