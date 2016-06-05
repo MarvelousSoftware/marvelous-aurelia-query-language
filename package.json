@@ -63,9 +63,9 @@
       "lib": "dist/amd"
     },
     "dependencies": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-beta.1.1.3",
-      "aurelia-templating": "npm:aurelia-templating@^1.0.0-beta.1.1.1",
-      "marvelous-aurelia-core": "marveloussoftware/marvelous-aurelia-core@^0.1.0"
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-beta.1.2.3",
+      "aurelia-templating": "npm:aurelia-templating@^1.0.0-beta.1.2.7",
+      "marvelous-aurelia-core": "marveloussoftware/marvelous-aurelia-core@^0.2.0"
     },
     "devDependencies": {
       "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0-beta.1",
