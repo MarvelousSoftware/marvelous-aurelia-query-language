@@ -1,8 +1,8 @@
-System.register(['./queryLanguage/queryLanguage'], function(exports_1, context_1) {
+System.register(['./query-language/query-language'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     function configure(aurelia) {
-        aurelia.globalResources('./queryLanguage/queryLanguage');
+        aurelia.globalResources('./query-language/query-language');
     }
     exports_1("configure", configure);
     var exportedNames_1 = {
@@ -17,8 +17,8 @@ System.register(['./queryLanguage/queryLanguage'], function(exports_1, context_1
     }
     return {
         setters:[
-            function (queryLanguage_1_1) {
-                exportStar_1(queryLanguage_1_1);
+            function (query_language_1_1) {
+                exportStar_1(query_language_1_1);
             }],
         execute: function() {
         }

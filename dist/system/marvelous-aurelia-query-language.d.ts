@@ -1,4 +1,4 @@
-declare module "marvelous-aurelia-query-language/queryLanguage/queryLanguage" {
+declare module "marvelous-aurelia-query-language/query-language/query-language" {
 	import { AureliaUtils } from 'marvelous-aurelia-core/aureliaUtils';
 	export class QueryLanguage {
 	    private _element;
@@ -56,5 +56,5 @@ declare module "marvelous-aurelia-query-language/queryLanguage/queryLanguage" {
 }
 declare module "marvelous-aurelia-query-language" {
 	export function configure(aurelia: any): void;
-	export * from 'marvelous-aurelia-query-language/queryLanguage/queryLanguage';
+	export * from 'marvelous-aurelia-query-language/query-language/query-language';
 }
