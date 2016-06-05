@@ -1,6 +1,6 @@
 {
   "name": "marvelous-aurelia-query-language",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Damian Kaminski",
   "license": "GNU General Public License",
   "homepage": "http://marvelous.software/docs.html#/query-language",
@@ -65,7 +65,7 @@
     "dependencies": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-beta.1.2.3",
       "aurelia-templating": "npm:aurelia-templating@^1.0.0-beta.1.2.7",
-      "marvelous-aurelia-core": "marveloussoftware/marvelous-aurelia-core@^0.2.0"
+      "marvelous-aurelia-core": "marveloussoftware/marvelous-aurelia-core@^0.2.1"
     },
     "devDependencies": {
       "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0-beta.1",
